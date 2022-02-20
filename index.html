@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="password-container">
+        <input type="text" id="password-output" value="Password generator" readonly>
+
+        <div class="range-container">
+            <input type="range" id="password-length" min="6" max="15" value="6"
+            oninput="document.getElementById('password-length-display').value = this.value">
+            <input type="text" id="password-length-display" value="6" readonly>
+        </div>
+        <div class="checkbox-container">
+            <input type="checkbox" id="uppercase">
+            <label for="uppercase">A-Z</label>
+
+            <input type="checkbox" id="lowercase">
+            <label for="lowercase">a-z</label>
+
+            <input type="checkbox" id="numbers">
+            <label for="numbers">0-9</label>
+
+            <input type="checkbox" id="specialChars">
+            <label for="specialChars">!-?</label>
+        </div>
+
+        <button id="generateButton">Generate password</button>
+    </div>
+<script src="index.js"></script>
+</body>
+</html>
